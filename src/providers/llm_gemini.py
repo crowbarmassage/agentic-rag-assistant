@@ -1,8 +1,9 @@
-"""Google Gemini LLM provider implementation."""
+"""Google Gemini LLM provider implementation using the new google.genai SDK."""
 
 import json
 from typing import Optional, Type
-import google.generativeai as genai
+from google import genai
+from google.genai import types
 from pydantic import BaseModel
 
 from .base import BaseLLMProvider, LLMResponse
@@ -14,7 +15,8 @@ class GeminiProvider(BaseLLMProvider):
     SUPPORTED_MODELS = [
         "gemini-1.5-flash",
         "gemini-1.5-pro",
-        "gemini-pro"
+        "gemini-2.0-flash",
+        "gemini-2.5-flash",
     ]
     DEFAULT_MODEL = "gemini-1.5-flash"
 
@@ -23,11 +25,8 @@ class GeminiProvider(BaseLLMProvider):
         if self.model_name not in self.SUPPORTED_MODELS:
             raise ValueError(f"Model {self.model_name} not supported. Choose from: {self.SUPPORTED_MODELS}")
 
-        if api_key:
-            genai.configure(api_key=api_key)
-        # Otherwise uses GOOGLE_API_KEY env var
-
-        self.model = genai.GenerativeModel(self.model_name)
+        # Create client - uses GOOGLE_API_KEY or GEMINI_API_KEY env var if api_key not provided
+        self.client = genai.Client(api_key=api_key) if api_key else genai.Client()
 
     def generate(
         self,
@@ -41,14 +40,15 @@ class GeminiProvider(BaseLLMProvider):
         if system_prompt:
             full_prompt = f"{system_prompt}\n\n{prompt}"
 
-        generation_config = genai.GenerationConfig(
+        config = types.GenerateContentConfig(
             temperature=temperature,
             max_output_tokens=max_tokens
         )
 
-        response = self.model.generate_content(
-            full_prompt,
-            generation_config=generation_config
+        response = self.client.models.generate_content(
+            model=self.model_name,
+            contents=full_prompt,
+            config=config
         )
 
         # Handle usage metadata safely
@@ -84,14 +84,15 @@ Output ONLY the JSON object, no markdown or additional text.
 """
         full_prompt = f"{system_prompt or ''}\n\n{schema_instruction}\n\n{prompt}".strip()
 
-        generation_config = genai.GenerationConfig(
+        config = types.GenerateContentConfig(
             temperature=temperature,
             response_mime_type="application/json"
         )
 
-        response = self.model.generate_content(
-            full_prompt,
-            generation_config=generation_config
+        response = self.client.models.generate_content(
+            model=self.model_name,
+            contents=full_prompt,
+            config=config
         )
 
         return response_model.model_validate_json(response.text)

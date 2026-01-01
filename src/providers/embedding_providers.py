@@ -126,36 +126,44 @@ class CohereEmbeddingProvider(BaseEmbeddingProvider):
 
 
 class GoogleEmbeddingProvider(BaseEmbeddingProvider):
-    """Google embeddings provider."""
+    """Google embeddings provider using the new google.genai SDK."""
 
     SUPPORTED_MODELS = {
         "text-embedding-004": 768,
-        "embedding-001": 768,
+        "gemini-embedding-001": 3072,
     }
     DEFAULT_MODEL = "text-embedding-004"
 
     def __init__(self, model: Optional[str] = None, api_key: Optional[str] = None):
-        import google.generativeai as genai
+        from google import genai
 
         self.model_name = model or self.DEFAULT_MODEL
         if self.model_name not in self.SUPPORTED_MODELS:
             raise ValueError(f"Model {self.model_name} not supported")
 
         self._dimension = self.SUPPORTED_MODELS[self.model_name]
-        if api_key:
-            genai.configure(api_key=api_key)
-        self.genai = genai
+        # Create client - uses GOOGLE_API_KEY or GEMINI_API_KEY env var if api_key not provided
+        self.client = genai.Client(api_key=api_key) if api_key else genai.Client()
 
     def embed_text(self, text: str) -> list[float]:
-        result = self.genai.embed_content(
-            model=f"models/{self.model_name}",
-            content=text,
-            task_type="retrieval_query"
+        from google.genai.types import EmbedContentConfig
+
+        response = self.client.models.embed_content(
+            model=self.model_name,
+            contents=text,
+            config=EmbedContentConfig(task_type="RETRIEVAL_QUERY")
         )
-        return result['embedding']
+        return list(response.embeddings[0].values)
 
     def embed_texts(self, texts: list[str]) -> list[list[float]]:
-        return [self.embed_text(text) for text in texts]
+        from google.genai.types import EmbedContentConfig
+
+        response = self.client.models.embed_content(
+            model=self.model_name,
+            contents=texts,
+            config=EmbedContentConfig(task_type="RETRIEVAL_DOCUMENT")
+        )
+        return [list(emb.values) for emb in response.embeddings]
 
     @property
     def dimension(self) -> int:

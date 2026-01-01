@@ -118,6 +118,8 @@ class TestGeminiProvider:
 
         assert "gemini-1.5-flash" in GeminiProvider.SUPPORTED_MODELS
         assert "gemini-1.5-pro" in GeminiProvider.SUPPORTED_MODELS
+        assert "gemini-2.0-flash" in GeminiProvider.SUPPORTED_MODELS
+        assert "gemini-2.5-flash" in GeminiProvider.SUPPORTED_MODELS
         assert GeminiProvider.DEFAULT_MODEL == "gemini-1.5-flash"
 
     def test_gemini_invalid_model(self):
@@ -274,3 +276,5 @@ class TestGoogleEmbeddingProvider:
 
         assert "text-embedding-004" in GoogleEmbeddingProvider.SUPPORTED_MODELS
         assert GoogleEmbeddingProvider.SUPPORTED_MODELS["text-embedding-004"] == 768
+        assert "gemini-embedding-001" in GoogleEmbeddingProvider.SUPPORTED_MODELS
+        assert GoogleEmbeddingProvider.SUPPORTED_MODELS["gemini-embedding-001"] == 3072
