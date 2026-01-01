@@ -1,5 +1,8 @@
 """FastAPI application for ShopUNow Assistant."""
 
+from dotenv import load_dotenv
+load_dotenv()  # Load .env before any other imports
+
 from contextlib import asynccontextmanager
 from typing import Union
 from fastapi import FastAPI, HTTPException, status

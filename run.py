@@ -1,5 +1,8 @@
 """Run script for ShopUNow Assistant API."""
 
+from dotenv import load_dotenv
+load_dotenv()  # Load .env before any other imports
+
 import uvicorn
 from src.config import get_settings
 
