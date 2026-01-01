@@ -46,7 +46,10 @@ class ChromaDBClient:
         if self._collection is None:
             self._collection = self.client.get_or_create_collection(
                 name=self.COLLECTION_NAME,
-                metadata={"description": "ShopUNow FAQ knowledge base"}
+                metadata={
+                    "description": "ShopUNow FAQ knowledge base",
+                    "hnsw:space": "cosine"  # Use cosine similarity
+                }
             )
         return self._collection
 
@@ -195,8 +198,9 @@ class ChromaDBClient:
             return retrieved_docs
 
         for i, doc_id in enumerate(results['ids'][0]):
-            # Convert distance to similarity
-            # ChromaDB uses L2 distance by default, clamp to valid range
+            # Convert cosine distance to similarity
+            # Cosine distance = 1 - cosine_similarity, so similarity = 1 - distance
+            # Clamp to [0, 1] since negative similarity means opposite vectors (no match)
             distance = results['distances'][0][i]
             similarity = max(0.0, min(1.0, 1 - distance))
 
