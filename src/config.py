@@ -42,7 +42,7 @@ class Settings(BaseSettings):
     chroma_persist_dir: str = Field(default="./data/chroma_db")
 
     # Retrieval Configuration
-    retrieval_min_threshold: float = Field(default=0.5, ge=0.0, le=1.0)
+    retrieval_min_threshold: float = Field(default=0.3, ge=0.0, le=1.0)
     retrieval_max_k: int = Field(default=10, ge=1, le=50)
     retrieval_drop_off_ratio: float = Field(default=0.7, ge=0.0, le=1.0)
 
