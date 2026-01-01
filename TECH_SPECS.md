@@ -2480,8 +2480,13 @@ python-dotenv>=1.0.0
 | Scenario | min_threshold | drop_off_ratio |
 |----------|---------------|----------------|
 | High precision (few but accurate) | 0.7 | 0.8 |
-| Balanced (default) | 0.5 | 0.7 |
-| High recall (more results) | 0.3 | 0.6 |
+| Balanced | 0.5 | 0.7 |
+| **Default (MiniLM optimized)** | **0.3** | **0.7** |
+| High recall (more results) | 0.2 | 0.6 |
+
+> **Note:** The default threshold of 0.3 is optimized for Sentence Transformers (all-MiniLM-L6-v2).
+> MiniLM embeddings typically produce similarity scores in the 0.3-0.6 range for relevant matches.
+> If using OpenAI embeddings (higher dimensional), consider increasing to 0.5-0.6.
 
 ---
 
