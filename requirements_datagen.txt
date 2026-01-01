@@ -1,0 +1,7 @@
+# Requirements for FAQ data generation
+# Install with: pip install -r requirements_datagen.txt
+
+# LLM Providers (install the one you plan to use)
+openai>=1.12.0
+google-generativeai>=0.4.0
+groq>=0.4.2
