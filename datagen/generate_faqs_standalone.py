@@ -19,7 +19,7 @@ import json
 import argparse
 import os
 from pathlib import Path
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Optional, Callable
 
 # Load environment variables from .env file
@@ -301,7 +301,7 @@ def generate_department_faqs(
         "department_name": context["name"],
         "user_type": context["user_type"],
         "description": context["description"],
-        "generated_at": datetime.utcnow().isoformat(),
+        "generated_at": datetime.now(timezone.utc).isoformat(),
         "count": len(qa_pairs),
         "qa_pairs": qa_pairs
     }
