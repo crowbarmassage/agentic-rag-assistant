@@ -749,6 +749,33 @@ class EmbeddingProviderFactory:
         return provider_class(**kwargs)
 ```
 
+### 2.6 Embedding Provider Comparison
+
+| Provider | Model | Dimensions | Similarity Score Range | Recommended Threshold |
+|----------|-------|------------|----------------------|----------------------|
+| **Sentence Transformers** | all-MiniLM-L6-v2 | 384 | 0.3 - 0.7 | 0.3 |
+| **Sentence Transformers** | all-mpnet-base-v2 | 768 | 0.4 - 0.8 | 0.4 |
+| **OpenAI** | text-embedding-3-small | 1536 | 0.5 - 0.9 | 0.5 |
+| **OpenAI** | text-embedding-3-large | 3072 | 0.6 - 0.95 | 0.6 |
+| **Cohere** | embed-english-v3.0 | 1024 | 0.4 - 0.85 | 0.45 |
+| **Google** | text-embedding-004 | 768 | 0.4 - 0.8 | 0.4 |
+
+**Key Observations:**
+
+1. **Dimension vs. Score Range**: Higher-dimensional embeddings (OpenAI) typically produce higher similarity scores for relevant matches and greater separation between relevant/irrelevant results.
+
+2. **MiniLM Trade-offs**:
+   - ✅ Free, local, fast, no API calls
+   - ✅ Works well for FAQ-style retrieval
+   - ⚠️ Lower similarity scores (0.3-0.5 for good matches)
+   - ⚠️ Less semantic distinction for complex queries
+
+3. **When to Switch Providers**:
+   - Use **Sentence Transformers** for: Cost-sensitive deployments, privacy requirements, offline usage
+   - Use **OpenAI embeddings** for: Higher retrieval precision, complex semantic queries, production at scale
+
+4. **Threshold Adjustment Rule**: When switching embedding providers, adjust your threshold proportionally to the score range. A query scoring 0.45 with MiniLM might score 0.75 with OpenAI embeddings.
+
 ---
 
 ## 3. Data Models (Pydantic)
@@ -1551,7 +1578,7 @@ class RetrievalPipeline:
 
 | Parameter | Default | Description |
 |-----------|---------|-------------|
-| `min_threshold` | 0.5 | Minimum similarity score (0-1) to consider |
+| `min_threshold` | 0.3 | Minimum similarity score (0-1) to consider |
 | `max_k` | 10 | Maximum initial candidates to fetch |
 | `drop_off_ratio` | 0.7 | Stop if next score < previous * ratio |
 
@@ -2150,7 +2177,7 @@ class Settings(BaseSettings):
     chroma_persist_dir: str = Field(default="./data/chroma_db")
     
     # Retrieval Configuration
-    retrieval_min_threshold: float = Field(default=0.5, ge=0.0, le=1.0)
+    retrieval_min_threshold: float = Field(default=0.3, ge=0.0, le=1.0)
     retrieval_max_k: int = Field(default=10, ge=1, le=50)
     retrieval_drop_off_ratio: float = Field(default=0.7, ge=0.0, le=1.0)
     
@@ -2189,7 +2216,7 @@ COHERE_API_KEY=...
 CHROMA_PERSIST_DIR=./data/chroma_db
 
 # === Retrieval Settings ===
-RETRIEVAL_MIN_THRESHOLD=0.5
+RETRIEVAL_MIN_THRESHOLD=0.3
 RETRIEVAL_MAX_K=10
 RETRIEVAL_DROP_OFF_RATIO=0.7
 
@@ -2480,8 +2507,13 @@ python-dotenv>=1.0.0
 | Scenario | min_threshold | drop_off_ratio |
 |----------|---------------|----------------|
 | High precision (few but accurate) | 0.7 | 0.8 |
-| Balanced (default) | 0.5 | 0.7 |
-| High recall (more results) | 0.3 | 0.6 |
+| Balanced | 0.5 | 0.7 |
+| **Default (MiniLM optimized)** | **0.3** | **0.7** |
+| High recall (more results) | 0.2 | 0.6 |
+
+> **Note:** The default threshold of 0.3 is optimized for Sentence Transformers (all-MiniLM-L6-v2).
+> MiniLM embeddings typically produce similarity scores in the 0.3-0.6 range for relevant matches.
+> If using OpenAI embeddings (higher dimensional), consider increasing to 0.5-0.6.
 
 ---
 

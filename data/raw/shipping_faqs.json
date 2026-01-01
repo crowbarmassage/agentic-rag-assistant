@@ -1,0 +1,190 @@
+{
+  "department": "shipping",
+  "department_name": "Shipping & Delivery",
+  "user_type": "external_customer",
+  "description": "Shipping & Delivery department for ShopUNow, a retail company.\n\nShipping handles order fulfillment queries including:\n- Order tracking and delivery status\n- Estimated delivery time inquiries\n- Delayed or late package issues\n- Missing or lost package claims\n- Damaged goods reporting and replacement\n- Return initiation and return labels\n- Address changes before shipping\n- International shipping questions\n- In-store pickup options\n- Delivery scheduling and rescheduling\n- Shipping cost questions\n- Package theft claims",
+  "generated_at": "2026-01-01T14:22:00.059929",
+  "count": 15,
+  "qa_pairs": [
+    {
+      "id": "shipping_001",
+      "question": "How can I track my order?",
+      "answer": "You can track your order by visiting our customer portal at my.shopunow.com. Once logged in, navigate to the 'Order History' section and click on the relevant order to view the tracking details. If you don't have an account, you can also track your order using the tracking link provided in your shipping confirmation email.",
+      "department": "shipping",
+      "user_type": "external_customer",
+      "keywords": [
+        "order tracking",
+        "customer portal",
+        "shipping confirmation"
+      ]
+    },
+    {
+      "id": "shipping_002",
+      "question": "What is the estimated delivery time for my order?",
+      "answer": "Estimated delivery times vary based on your location and the shipping method selected at checkout. Generally, domestic orders are delivered within 3-7 business days, while international orders may take 7-14 business days. For more specific information, please refer to your order confirmation email or contact our Shipping & Delivery department.",
+      "department": "shipping",
+      "user_type": "external_customer",
+      "keywords": [
+        "estimated delivery",
+        "shipping method",
+        "business days"
+      ]
+    },
+    {
+      "id": "shipping_003",
+      "question": "What should I do if my package is delayed?",
+      "answer": "If your package is delayed, please first check the tracking information available in your customer portal at my.shopunow.com. If the tracking shows no updates for more than 5 business days, contact our Shipping & Delivery department for assistance. We will work with the carrier to resolve the issue as quickly as possible.",
+      "department": "shipping",
+      "user_type": "external_customer",
+      "keywords": [
+        "delayed package",
+        "tracking information",
+        "customer portal"
+      ]
+    },
+    {
+      "id": "shipping_004",
+      "question": "How can I report a missing or lost package?",
+      "answer": "To report a missing or lost package, please visit our customer portal at my.shopunow.com and fill out the 'Lost Package Claim' form within 30 days of the expected delivery date. Once submitted, our team will investigate and update you within 3-5 business days.",
+      "department": "shipping",
+      "user_type": "external_customer",
+      "keywords": [
+        "missing package",
+        "lost package",
+        "claim form"
+      ]
+    },
+    {
+      "id": "shipping_005",
+      "question": "What should I do if I receive damaged goods?",
+      "answer": "If you receive damaged goods, please take clear photos of the item and packaging, and report the issue within 48 hours by using the 'Damaged Goods Reporting' form located in your customer portal at my.shopunow.com. We will process your claim and arrange for a replacement within 5-7 business days.",
+      "department": "shipping",
+      "user_type": "external_customer",
+      "keywords": [
+        "damaged goods",
+        "reporting",
+        "replacement"
+      ]
+    },
+    {
+      "id": "shipping_006",
+      "question": "How can I initiate a return for my order?",
+      "answer": "To initiate a return, log into your account on our customer portal at my.shopunow.com. Select the order you wish to return and follow the prompts to generate a return label. Returns must be initiated within 30 days of delivery. Once we receive the returned item, refunds will be processed within 5-10 business days.",
+      "department": "shipping",
+      "user_type": "external_customer",
+      "keywords": [
+        "return initiation",
+        "return label",
+        "refund"
+      ]
+    },
+    {
+      "id": "shipping_007",
+      "question": "Can I change my shipping address after placing an order?",
+      "answer": "You can change your shipping address within 1 hour of placing your order by contacting our Shipping & Delivery department at shipping@shopunow.com. After this period, we may not be able to modify the address if the package has already been processed for shipment.",
+      "department": "shipping",
+      "user_type": "external_customer",
+      "keywords": [
+        "address change",
+        "shipping address",
+        "order modification"
+      ]
+    },
+    {
+      "id": "shipping_008",
+      "question": "Do you offer international shipping?",
+      "answer": "Yes, we offer international shipping to select countries. During checkout, you will see available shipping options based on your location. Please note that international shipping may take longer, typically between 7-14 business days, and additional customs fees may apply.",
+      "department": "shipping",
+      "user_type": "external_customer",
+      "keywords": [
+        "international shipping",
+        "checkout",
+        "customs fees"
+      ]
+    },
+    {
+      "id": "shipping_009",
+      "question": "What are my options for in-store pickup?",
+      "answer": "In-store pickup is available for select items. During checkout, choose the 'In-Store Pickup' option, and select your preferred store location. You’ll receive a notification when your order is ready for pickup, usually within 1-2 business days. Bring your order confirmation and a valid ID.",
+      "department": "shipping",
+      "user_type": "external_customer",
+      "keywords": [
+        "in-store pickup",
+        "checkout",
+        "order confirmation"
+      ]
+    },
+    {
+      "id": "shipping_010",
+      "question": "Can I schedule or reschedule my delivery?",
+      "answer": "Yes, you can schedule or reschedule your delivery through our customer portal at my.shopunow.com. Access the 'Delivery Options' section of your order and select a new date and time within our available windows. Please allow at least 24 hours' notice for changes.",
+      "department": "shipping",
+      "user_type": "external_customer",
+      "keywords": [
+        "delivery scheduling",
+        "reschedule",
+        "customer portal"
+      ]
+    },
+    {
+      "id": "shipping_011",
+      "question": "How can I inquire about shipping costs?",
+      "answer": "Shipping costs are calculated at checkout based on your shipping address and the items in your cart. For a rough estimate before checkout, you can use our shipping calculator available on the product page. If you have further questions about shipping costs, feel free to contact our Shipping & Delivery department.",
+      "department": "shipping",
+      "user_type": "external_customer",
+      "keywords": [
+        "shipping costs",
+        "checkout",
+        "shipping calculator"
+      ]
+    },
+    {
+      "id": "shipping_012",
+      "question": "What should I do if my package was stolen?",
+      "answer": "If you believe your package was stolen, please report the incident through our 'Package Theft Claim' form in the customer portal at my.shopunow.com within 30 days of the expected delivery date. We will review your claim and may require you to file a police report.",
+      "department": "shipping",
+      "user_type": "external_customer",
+      "keywords": [
+        "package theft",
+        "claim form",
+        "police report"
+      ]
+    },
+    {
+      "id": "shipping_013",
+      "question": "How do I contact customer support for shipping inquiries?",
+      "answer": "For shipping inquiries, you can reach our customer support team by emailing shipping@shopunow.com or calling our dedicated line at ext. 5555. Our team is available Monday to Friday from 9 AM to 5 PM. Please have your order number ready for quicker assistance.",
+      "department": "shipping",
+      "user_type": "external_customer",
+      "keywords": [
+        "customer support",
+        "contact",
+        "shipping inquiries"
+      ]
+    },
+    {
+      "id": "shipping_014",
+      "question": "Can I change my shipping method after placing an order?",
+      "answer": "Unfortunately, you cannot change your shipping method after your order has been placed. However, if you contact our Shipping & Delivery department within 1 hour of placing your order, we may be able to assist you in canceling the order so you can reorder with the desired shipping method.",
+      "department": "shipping",
+      "user_type": "external_customer",
+      "keywords": [
+        "shipping method",
+        "order cancellation",
+        "customer support"
+      ]
+    },
+    {
+      "id": "shipping_015",
+      "question": "What if I forgot to enter a promo code during checkout?",
+      "answer": "Unfortunately, promo codes must be applied at the time of checkout and cannot be added retroactively. If you have a valid promo code, you can apply it on your next order. Sign up for our newsletter at shopunow.com to receive future promotions directly in your inbox.",
+      "department": "shipping",
+      "user_type": "external_customer",
+      "keywords": [
+        "promo code",
+        "checkout",
+        "promotions"
+      ]
+    }
+  ]
+}

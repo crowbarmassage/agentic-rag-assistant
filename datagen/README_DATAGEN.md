@@ -294,7 +294,7 @@ After generating FAQ data:
 1. **Ingest into ChromaDB:**
    ```python
    from src.vectorstore import ingest_faqs
-   ingest_faqs(reset_collection=True)
+   ingest_faqs(data_dir='./data/raw', chroma_dir='./data/chroma_db', reset_collection=True)
    ```
 
 2. **Verify ingestion:**

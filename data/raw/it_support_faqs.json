@@ -1,0 +1,190 @@
+{
+  "department": "it_support",
+  "department_name": "IT Support / Tech Support",
+  "user_type": "internal_employee",
+  "description": "IT Support department for ShopUNow, a retail company.\n\nIT Support manages technical issues for employees including:\n- Password resets and account lockouts\n- VPN setup and remote access issues\n- Hardware issues (laptops, monitors, keyboards, mice)\n- Software installation and licensing requests\n- Email and Outlook calendar problems\n- Network and WiFi connectivity issues\n- Security awareness and phishing reporting\n- System outages and maintenance notifications\n- New employee tech setup and equipment\n- Printer and scanner issues\n- Multi-factor authentication (MFA) setup\n- Shared drive and file access permissions",
+  "generated_at": "2026-01-01T14:21:05.878701",
+  "count": 15,
+  "qa_pairs": [
+    {
+      "id": "it_support_001",
+      "question": "How do I reset my password if I am locked out of my account?",
+      "answer": "You can reset your password by visiting the login page at login.shopunow.com and clicking on 'Forgot Password'. Follow the prompts to receive a password reset link via your registered email. If you still have trouble, please contact the IT Helpdesk at ext. 5555 for assistance.",
+      "department": "it_support",
+      "user_type": "internal_employee",
+      "keywords": [
+        "password reset",
+        "account lockout",
+        "IT Helpdesk"
+      ]
+    },
+    {
+      "id": "it_support_002",
+      "question": "What should I do if I cannot connect to the VPN?",
+      "answer": "If you're having trouble connecting to the VPN, first ensure your internet connection is stable. Then, check if you are using the correct credentials. If issues persist, please restart your device and try again. If you still cannot connect, contact IT Support at ext. 5555 for further assistance.",
+      "department": "it_support",
+      "user_type": "internal_employee",
+      "keywords": [
+        "VPN",
+        "connectivity issues",
+        "IT Support"
+      ]
+    },
+    {
+      "id": "it_support_003",
+      "question": "How do I request new hardware, like a laptop or monitor?",
+      "answer": "To request new hardware, please fill out the Hardware Request Form available on the IT Helpdesk portal at helpdesk.shopunow.com. Requests are typically processed within 3-5 business days. You may need to provide justification for the request as part of the approval process.",
+      "department": "it_support",
+      "user_type": "internal_employee",
+      "keywords": [
+        "hardware request",
+        "laptop",
+        "monitor"
+      ]
+    },
+    {
+      "id": "it_support_004",
+      "question": "Can I install software on my work computer without permission?",
+      "answer": "No, all software installations must be approved by the IT department to ensure compliance and security. Please submit a Software Installation Request through the IT Helpdesk portal, and we will process your request within 1-2 business days.",
+      "department": "it_support",
+      "user_type": "internal_employee",
+      "keywords": [
+        "software installation",
+        "IT department",
+        "request"
+      ]
+    },
+    {
+      "id": "it_support_005",
+      "question": "I'm having problems with Outlook calendar synchronization. What can I do?",
+      "answer": "If your Outlook calendar is not synchronizing, first check your internet connection. Then, try closing and reopening Outlook. If the issue persists, navigate to File > Account Settings > Account Settings, and check your account’s settings. For further assistance, contact IT Support at ext. 5555.",
+      "department": "it_support",
+      "user_type": "internal_employee",
+      "keywords": [
+        "Outlook",
+        "calendar synchronization",
+        "IT Support"
+      ]
+    },
+    {
+      "id": "it_support_006",
+      "question": "Who do I contact for network and WiFi connectivity issues?",
+      "answer": "For any network or WiFi connectivity issues, please contact the IT Helpdesk at ext. 5555 or submit a ticket through the IT Helpdesk portal. Our team will investigate the issue promptly and aim to resolve it within 1-2 hours during business hours.",
+      "department": "it_support",
+      "user_type": "internal_employee",
+      "keywords": [
+        "network issues",
+        "WiFi",
+        "IT Helpdesk"
+      ]
+    },
+    {
+      "id": "it_support_007",
+      "question": "What is the process for reporting phishing emails?",
+      "answer": "To report phishing emails, please forward the suspicious email to phishing@shopunow.com. Include a brief description of why you suspect it's phishing. Our security team will investigate and respond accordingly. Your vigilance helps keep our network secure.",
+      "department": "it_support",
+      "user_type": "internal_employee",
+      "keywords": [
+        "phishing",
+        "reporting",
+        "security"
+      ]
+    },
+    {
+      "id": "it_support_008",
+      "question": "How will I be notified of system outages or maintenance?",
+      "answer": "All notifications regarding system outages or maintenance will be communicated via email and posted on the IT Helpdesk portal. We aim to provide at least 24 hours' notice for maintenance activities. Please check both your email and the portal regularly.",
+      "department": "it_support",
+      "user_type": "internal_employee",
+      "keywords": [
+        "system outages",
+        "maintenance notifications",
+        "IT Helpdesk"
+      ]
+    },
+    {
+      "id": "it_support_009",
+      "question": "What do I need to do to set up my tech equipment as a new employee?",
+      "answer": "As a new employee, your tech setup will be handled by IT. Please ensure you have submitted your onboarding form through the HR Portal at hr.shopunow.com. IT will reach out to you within your first week to arrange equipment pickup and setup.",
+      "department": "it_support",
+      "user_type": "internal_employee",
+      "keywords": [
+        "new employee",
+        "tech setup",
+        "HR Portal"
+      ]
+    },
+    {
+      "id": "it_support_010",
+      "question": "How do I fix issues with my printer or scanner?",
+      "answer": "For printer or scanner issues, start by checking if the device is powered on and connected to the network. If problems persist, try restarting the device. For further assistance, please submit a ticket through the IT Helpdesk portal or contact IT Support at ext. 5555.",
+      "department": "it_support",
+      "user_type": "internal_employee",
+      "keywords": [
+        "printer issues",
+        "scanner issues",
+        "IT Support"
+      ]
+    },
+    {
+      "id": "it_support_011",
+      "question": "How do I set up multi-factor authentication (MFA)?",
+      "answer": "To set up multi-factor authentication (MFA), log in to your account at account.shopunow.com and navigate to the security settings. Follow the prompts to link your mobile device or authentication app. If you need help, please contact IT Support for guidance.",
+      "department": "it_support",
+      "user_type": "internal_employee",
+      "keywords": [
+        "MFA",
+        "multi-factor authentication",
+        "security"
+      ]
+    },
+    {
+      "id": "it_support_012",
+      "question": "How can I request access to shared drives or files?",
+      "answer": "To request access to shared drives or files, please fill out the Access Request Form on the IT Helpdesk portal. Provide details about the files or drives you need access to. We will process your request within 3-5 business days.",
+      "department": "it_support",
+      "user_type": "internal_employee",
+      "keywords": [
+        "shared drives",
+        "file access",
+        "IT Helpdesk"
+      ]
+    },
+    {
+      "id": "it_support_013",
+      "question": "What do I do if my laptop is running slow?",
+      "answer": "If your laptop is running slow, start by closing unnecessary programs and tabs. You can also try restarting your laptop to clear temporary files. If the problem persists, contact IT Support at ext. 5555 for further diagnostics and potential upgrades.",
+      "department": "it_support",
+      "user_type": "internal_employee",
+      "keywords": [
+        "slow laptop",
+        "performance issues",
+        "IT Support"
+      ]
+    },
+    {
+      "id": "it_support_014",
+      "question": "Where can I find training materials for IT systems?",
+      "answer": "Training materials for IT systems can be found on the Learning Portal at learning.shopunow.com. The portal contains tutorials and guides on the various systems we use. If you have specific questions, feel free to contact IT Support.",
+      "department": "it_support",
+      "user_type": "internal_employee",
+      "keywords": [
+        "training materials",
+        "IT systems",
+        "Learning Portal"
+      ]
+    },
+    {
+      "id": "it_support_015",
+      "question": "How can I ensure my computer is secure from threats?",
+      "answer": "To ensure your computer is secure, regularly update your software and operating system, use strong passwords, and be cautious of suspicious emails. Additionally, enable MFA for added security. For more tips, visit our Security Awareness page at security.shopunow.com.",
+      "department": "it_support",
+      "user_type": "internal_employee",
+      "keywords": [
+        "computer security",
+        "threats",
+        "MFA"
+      ]
+    }
+  ]
+}

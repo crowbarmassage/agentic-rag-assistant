@@ -1,0 +1,190 @@
+{
+  "department": "billing",
+  "department_name": "Billing & Payments",
+  "user_type": "external_customer",
+  "description": "Billing & Payments department for ShopUNow, a retail company.\n\nBilling handles customer payment matters including:\n- Invoice requests and copies\n- Refund processing and status inquiries\n- Payment method updates (credit card, PayPal, etc.)\n- Overcharge disputes and billing errors\n- Promotional code and discount issues\n- Gift card balance and redemption\n- Payment declined/failed troubleshooting\n- Tax exemption requests\n- Receipt and purchase history requests\n- Store credit inquiries\n- Subscription and recurring billing\n- Price match requests",
+  "generated_at": "2026-01-01T14:21:30.474796",
+  "count": 15,
+  "qa_pairs": [
+    {
+      "id": "billing_001",
+      "question": "How can I request a copy of my invoice?",
+      "answer": "You can request a copy of your invoice by logging into your account at my.shopunow.com. Navigate to the 'Order History' section and select the order for which you need an invoice. Click on 'Request Invoice' and follow the prompts. If you need further assistance, please contact our Billing Support at billing@shopunow.com.",
+      "department": "billing",
+      "user_type": "external_customer",
+      "keywords": [
+        "invoice",
+        "request",
+        "order history"
+      ]
+    },
+    {
+      "id": "billing_002",
+      "question": "What is the process for obtaining a refund?",
+      "answer": "To initiate a refund, please visit my.shopunow.com and go to the 'Order History' section. Locate the order you wish to refund and click on 'Request Refund.' Refunds are typically processed within 3-5 business days, depending on your bank’s policies. For further inquiries, you can reach out to our support team at billing@shopunow.com.",
+      "department": "billing",
+      "user_type": "external_customer",
+      "keywords": [
+        "refund",
+        "process",
+        "order history"
+      ]
+    },
+    {
+      "id": "billing_003",
+      "question": "How do I update my payment method?",
+      "answer": "To update your payment method, log into your account at my.shopunow.com. Navigate to 'Payment Methods' under your account settings and add or edit your preferred payment option. If you encounter any issues, please contact our Billing Support at billing@shopunow.com for assistance.",
+      "department": "billing",
+      "user_type": "external_customer",
+      "keywords": [
+        "payment method",
+        "update",
+        "account settings"
+      ]
+    },
+    {
+      "id": "billing_004",
+      "question": "What should I do if I believe I was overcharged?",
+      "answer": "If you believe you have been overcharged, please contact our Billing Support at billing@shopunow.com with your order number and details of the discrepancy. Our team will investigate the issue and get back to you within 3-5 business days.",
+      "department": "billing",
+      "user_type": "external_customer",
+      "keywords": [
+        "overcharge",
+        "billing error",
+        "discrepancy"
+      ]
+    },
+    {
+      "id": "billing_005",
+      "question": "I have a promotional code, how do I apply it?",
+      "answer": "To apply a promotional code, add items to your cart and proceed to checkout. On the checkout page, you will see a field labeled 'Promo Code.' Enter your code here and click 'Apply.' If the discount does not reflect, please ensure the code is valid and not expired, or reach out to billing@shopunow.com.",
+      "department": "billing",
+      "user_type": "external_customer",
+      "keywords": [
+        "promotional code",
+        "apply",
+        "checkout"
+      ]
+    },
+    {
+      "id": "billing_006",
+      "question": "How can I check my gift card balance?",
+      "answer": "You can check your gift card balance by visiting my.shopunow.com and navigating to the 'Gift Cards' section under your account. Enter your gift card number and PIN to view the balance. For further assistance, contact our support team at billing@shopunow.com.",
+      "department": "billing",
+      "user_type": "external_customer",
+      "keywords": [
+        "gift card",
+        "balance",
+        "check"
+      ]
+    },
+    {
+      "id": "billing_007",
+      "question": "What do I do if my payment was declined?",
+      "answer": "If your payment was declined, first check that your payment details are correct and your card has not expired. You can also try using a different payment method. If the issue persists, please contact your bank or reach out to our Billing Support at billing@shopunow.com for further assistance.",
+      "department": "billing",
+      "user_type": "external_customer",
+      "keywords": [
+        "payment declined",
+        "troubleshooting",
+        "bank"
+      ]
+    },
+    {
+      "id": "billing_008",
+      "question": "How do I request a tax exemption?",
+      "answer": "To request a tax exemption, please complete the Exemption Certificate available on our website and submit it to billing@shopunow.com. Our team will review your request and confirm your status within 5-7 business days. Make sure to provide your order details for faster processing.",
+      "department": "billing",
+      "user_type": "external_customer",
+      "keywords": [
+        "tax exemption",
+        "request",
+        "certificate"
+      ]
+    },
+    {
+      "id": "billing_009",
+      "question": "Can I get a receipt for my purchase?",
+      "answer": "Yes, you can obtain a receipt by logging into your account at my.shopunow.com. Go to 'Order History' and select the relevant order. Click on 'Download Receipt' to save a copy. If you need help, feel free to contact us at billing@shopunow.com.",
+      "department": "billing",
+      "user_type": "external_customer",
+      "keywords": [
+        "receipt",
+        "purchase",
+        "download"
+      ]
+    },
+    {
+      "id": "billing_010",
+      "question": "How can I inquire about my store credit?",
+      "answer": "To inquire about your store credit, log into your account at my.shopunow.com and navigate to 'Store Credit' under your account settings. Here, you can view your current balance. For additional questions, please reach out to billing@shopunow.com.",
+      "department": "billing",
+      "user_type": "external_customer",
+      "keywords": [
+        "store credit",
+        "inquiry",
+        "account settings"
+      ]
+    },
+    {
+      "id": "billing_011",
+      "question": "What is the policy for subscription and recurring billing?",
+      "answer": "Our subscription and recurring billing policy allows you to modify or cancel your subscription at any time through your account settings at my.shopunow.com. Changes are effective from the next billing cycle. For further questions, don't hesitate to contact billing@shopunow.com.",
+      "department": "billing",
+      "user_type": "external_customer",
+      "keywords": [
+        "subscription",
+        "recurring billing",
+        "policy"
+      ]
+    },
+    {
+      "id": "billing_012",
+      "question": "How do I submit a price match request?",
+      "answer": "To submit a price match request, please visit our website and navigate to the 'Price Match' section. Fill out the form with the relevant details of the competitor’s price and your order number. Our team will respond with a decision within 3-5 business days. If you need assistance, contact billing@shopunow.com.",
+      "department": "billing",
+      "user_type": "external_customer",
+      "keywords": [
+        "price match",
+        "request",
+        "competitor"
+      ]
+    },
+    {
+      "id": "billing_013",
+      "question": "Can I redeem my gift card during checkout?",
+      "answer": "Yes, you can redeem your gift card during the checkout process. On the payment page, enter your gift card number and PIN in the designated field. If your gift card balance covers the order total, it will be applied. For questions, please contact billing@shopunow.com.",
+      "department": "billing",
+      "user_type": "external_customer",
+      "keywords": [
+        "gift card",
+        "redeem",
+        "checkout"
+      ]
+    },
+    {
+      "id": "billing_014",
+      "question": "How long does it take for refunds to reflect in my account?",
+      "answer": "Refunds typically take 3-5 business days to reflect in your account, depending on your bank's processing times. If you have not seen the refund after this period, please contact our Billing Support at billing@shopunow.com for further assistance.",
+      "department": "billing",
+      "user_type": "external_customer",
+      "keywords": [
+        "refund",
+        "account",
+        "processing time"
+      ]
+    },
+    {
+      "id": "billing_015",
+      "question": "What should I do if I forgot my account password?",
+      "answer": "If you forgot your password, visit my.shopunow.com and click on 'Forgot Password?' on the login page. Follow the instructions to reset your password. If you encounter any issues, you can reach out to our IT Helpdesk at ext. 5555 for support.",
+      "department": "billing",
+      "user_type": "external_customer",
+      "keywords": [
+        "forgot password",
+        "reset",
+        "support"
+      ]
+    }
+  ]
+}

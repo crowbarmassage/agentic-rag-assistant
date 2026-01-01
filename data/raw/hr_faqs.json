@@ -1,0 +1,178 @@
+{
+  "department": "hr",
+  "department_name": "Human Resources",
+  "user_type": "internal_employee",
+  "description": "Human Resources department for ShopUNow, a retail company selling clothing, DIY products, books, and toys.\n\nHR handles employee lifecycle matters including:\n- Paid time off (PTO) and leave requests (vacation, sick, personal)\n- Payroll questions and salary matters\n- Benefits enrollment and inquiries (health, dental, 401k)\n- Performance reviews and feedback processes\n- Company policies and employee handbook\n- Onboarding for new employees\n- Internal job transfers and promotions\n- Employee wellness programs\n- Training and development opportunities\n- Workplace conduct and HR policies\n- Employee ID badges and access\n- Employment verification requests",
+  "generated_at": "2026-01-01T14:20:38.163850",
+  "count": 14,
+  "qa_pairs": [
+    {
+      "id": "hr_001",
+      "question": "How do I request paid time off (PTO)?",
+      "answer": "To request PTO, please log into the HR Portal at hr.shopunow.com and navigate to the 'Time Off' section. Fill out the PTO request form and submit it for your manager's approval. Requests are typically processed within 3-5 business days, so please plan accordingly.",
+      "department": "hr",
+      "user_type": "internal_employee",
+      "keywords": [
+        "PTO",
+        "time off",
+        "HR Portal"
+      ]
+    },
+    {
+      "id": "hr_002",
+      "question": "What should I do if I have a payroll question?",
+      "answer": "If you have a payroll question, please contact the Payroll Department directly at payroll@shopunow.com. Be sure to include your employee ID and a brief description of your inquiry for a quicker response, typically within 2 business days.",
+      "department": "hr",
+      "user_type": "internal_employee",
+      "keywords": [
+        "payroll",
+        "inquiries",
+        "contact"
+      ]
+    },
+    {
+      "id": "hr_003",
+      "question": "How can I enroll in health benefits?",
+      "answer": "To enroll in health benefits, visit the Benefits section of the HR Portal at hr.shopunow.com. Open enrollment typically occurs in November; however, you can enroll within 30 days of a qualifying life event. Follow the prompts to complete your enrollment.",
+      "department": "hr",
+      "user_type": "internal_employee",
+      "keywords": [
+        "health benefits",
+        "enrollment",
+        "HR Portal"
+      ]
+    },
+    {
+      "id": "hr_004",
+      "question": "When will I receive my performance review?",
+      "answer": "Performance reviews are conducted annually, typically in January. Your manager will schedule a meeting with you to discuss your performance and set goals for the upcoming year. Be prepared to provide feedback and share your accomplishments.",
+      "department": "hr",
+      "user_type": "internal_employee",
+      "keywords": [
+        "performance review",
+        "feedback",
+        "annual"
+      ]
+    },
+    {
+      "id": "hr_005",
+      "question": "Where can I find the employee handbook?",
+      "answer": "The employee handbook is available in the HR Portal at hr.shopunow.com under the 'Company Policies' section. It contains important information about company policies, conduct, and other resources. Make sure to review it annually or whenever updates are published.",
+      "department": "hr",
+      "user_type": "internal_employee",
+      "keywords": [
+        "employee handbook",
+        "company policies",
+        "HR Portal"
+      ]
+    },
+    {
+      "id": "hr_006",
+      "question": "What is the process for onboarding new employees?",
+      "answer": "Our onboarding process includes a welcome email, orientation session, and completion of necessary paperwork. New hires will receive a checklist via email and can access resources on the HR Portal at hr.shopunow.com. Onboarding typically lasts for the first two weeks of employment.",
+      "department": "hr",
+      "user_type": "internal_employee",
+      "keywords": [
+        "onboarding",
+        "new employees",
+        "orientation"
+      ]
+    },
+    {
+      "id": "hr_007",
+      "question": "How do I apply for an internal job transfer?",
+      "answer": "To apply for an internal job transfer, log into the HR Portal at hr.shopunow.com and navigate to the 'Internal Jobs' section. Submit your application along with an updated resume. Ensure your current manager is informed; transfers typically take 2-4 weeks to process.",
+      "department": "hr",
+      "user_type": "internal_employee",
+      "keywords": [
+        "internal transfer",
+        "job application",
+        "HR Portal"
+      ]
+    },
+    {
+      "id": "hr_008",
+      "question": "What wellness programs are available for employees?",
+      "answer": "ShopUNow offers various wellness programs, including gym memberships, mental health resources, and health challenges. You can find details about these programs in the Employee Wellness section of the HR Portal at hr.shopunow.com. Participation is encouraged year-round!",
+      "department": "hr",
+      "user_type": "internal_employee",
+      "keywords": [
+        "wellness programs",
+        "employee wellness",
+        "HR Portal"
+      ]
+    },
+    {
+      "id": "hr_009",
+      "question": "How can I request training and development opportunities?",
+      "answer": "To request training and development opportunities, visit the 'Training' section in the HR Portal at hr.shopunow.com. You can view available courses and submit your request for any specific training. Be sure to check for deadlines, typically at the end of each quarter.",
+      "department": "hr",
+      "user_type": "internal_employee",
+      "keywords": [
+        "training",
+        "development",
+        "HR Portal"
+      ]
+    },
+    {
+      "id": "hr_010",
+      "question": "What to do if I witness workplace misconduct?",
+      "answer": "If you witness workplace misconduct, please report it to HR immediately by emailing hr@shopunow.com or using the anonymous reporting tool available on the HR Portal. All reports are taken seriously and handled confidentially.",
+      "department": "hr",
+      "user_type": "internal_employee",
+      "keywords": [
+        "workplace misconduct",
+        "reporting",
+        "HR"
+      ]
+    },
+    {
+      "id": "hr_011",
+      "question": "How do I get an employee ID badge?",
+      "answer": "To obtain an employee ID badge, please contact the HR department at hr@shopunow.com. Include your employee ID and department. ID badges are typically processed within 5 business days and can be picked up at the HR office.",
+      "department": "hr",
+      "user_type": "internal_employee",
+      "keywords": [
+        "employee ID",
+        "badge",
+        "HR"
+      ]
+    },
+    {
+      "id": "hr_012",
+      "question": "How can I verify my employment?",
+      "answer": "For employment verification, please direct requests to hr@shopunow.com. Include your name, employee ID, and the details needed for verification. Requests are processed within 2-3 business days.",
+      "department": "hr",
+      "user_type": "internal_employee",
+      "keywords": [
+        "employment verification",
+        "HR",
+        "request"
+      ]
+    },
+    {
+      "id": "hr_013",
+      "question": "What are the guidelines for sick leave?",
+      "answer": "Sick leave is covered under our PTO policy. Employees are encouraged to notify their manager as soon as possible if they are unable to work due to illness. For extended sick leave, please contact HR to discuss options and necessary documentation.",
+      "department": "hr",
+      "user_type": "internal_employee",
+      "keywords": [
+        "sick leave",
+        "PTO",
+        "guidelines"
+      ]
+    },
+    {
+      "id": "hr_014",
+      "question": "Can I change my 401k contributions?",
+      "answer": "Yes, you can change your 401k contributions at any time. Log into the Benefits section of the HR Portal at hr.shopunow.com and follow the prompts to adjust your contribution percentage. Changes take effect in the next payroll cycle.",
+      "department": "hr",
+      "user_type": "internal_employee",
+      "keywords": [
+        "401k",
+        "contributions",
+        "HR Portal"
+      ]
+    }
+  ]
+}
