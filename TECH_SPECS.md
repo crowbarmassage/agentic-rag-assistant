@@ -1551,7 +1551,7 @@ class RetrievalPipeline:
 
 | Parameter | Default | Description |
 |-----------|---------|-------------|
-| `min_threshold` | 0.5 | Minimum similarity score (0-1) to consider |
+| `min_threshold` | 0.3 | Minimum similarity score (0-1) to consider |
 | `max_k` | 10 | Maximum initial candidates to fetch |
 | `drop_off_ratio` | 0.7 | Stop if next score < previous * ratio |
 
@@ -2150,7 +2150,7 @@ class Settings(BaseSettings):
     chroma_persist_dir: str = Field(default="./data/chroma_db")
     
     # Retrieval Configuration
-    retrieval_min_threshold: float = Field(default=0.5, ge=0.0, le=1.0)
+    retrieval_min_threshold: float = Field(default=0.3, ge=0.0, le=1.0)
     retrieval_max_k: int = Field(default=10, ge=1, le=50)
     retrieval_drop_off_ratio: float = Field(default=0.7, ge=0.0, le=1.0)
     
@@ -2189,7 +2189,7 @@ COHERE_API_KEY=...
 CHROMA_PERSIST_DIR=./data/chroma_db
 
 # === Retrieval Settings ===
-RETRIEVAL_MIN_THRESHOLD=0.5
+RETRIEVAL_MIN_THRESHOLD=0.3
 RETRIEVAL_MAX_K=10
 RETRIEVAL_DROP_OFF_RATIO=0.7
 

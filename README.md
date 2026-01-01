@@ -137,8 +137,12 @@ shopunow_assistant/
 │   └── utils/
 │       ├── __init__.py
 │       ├── prompts.py              # Prompt templates
-│       ├── data_generation_prompts.py
-│       └── generate_faq_data.py
+│       └── data_loader.py          # FAQ data loading utilities
+├── datagen/
+│   ├── generate_faqs_standalone.py # Standalone data generation script
+│   ├── generate_faq_data.py        # Data generation module
+│   ├── data_generation_prompts.py  # Generation prompts
+│   └── requirements_datagen.txt    # Data generation dependencies
 ├── data/
 │   ├── raw/                        # Generated FAQ JSON files
 │   │   ├── hr_faqs.json
@@ -202,13 +206,15 @@ shopunow_assistant/
 
 5. **Generate FAQ data** (if not already present)
    ```bash
-   python generate_faqs_standalone.py
+   python datagen/generate_faqs_standalone.py
    ```
 
 6. **Ingest data into vector store**
-   ```python
+   ```bash
+   python -c "
    from src.vectorstore import ingest_faqs
-   ingest_faqs(reset_collection=True)
+   ingest_faqs(data_dir='./data/raw', chroma_dir='./data/chroma_db', reset_collection=True)
+   "
    ```
 
 7. **Run the API**
@@ -216,11 +222,19 @@ shopunow_assistant/
    python run.py
    ```
 
+   You should see:
+   ```
+   [INIT] LLM: openai
+   [INIT] Embeddings: sentence_transformers (dim=384)
+   [INIT] ChromaDB: 59 documents
+   [INIT] Orchestrator ready
+   ```
+
 8. **Test it out**
    ```bash
    # Health check
    curl http://localhost:8000/health
-   
+
    # Query the assistant
    curl -X POST http://localhost:8000/query \
      -H "Content-Type: application/json" \
@@ -254,7 +268,7 @@ COHERE_API_KEY=...
 CHROMA_PERSIST_DIR=./data/chroma_db
 
 # Retrieval Settings
-RETRIEVAL_MIN_THRESHOLD=0.5            # Minimum similarity score
+RETRIEVAL_MIN_THRESHOLD=0.3            # Minimum similarity score (0.3 works well with MiniLM)
 RETRIEVAL_MAX_K=10                     # Max documents to retrieve
 RETRIEVAL_DROP_OFF_RATIO=0.7           # Dynamic K drop-off threshold
 
@@ -382,17 +396,19 @@ python test_api.py
 Generate synthetic FAQ data for the knowledge base:
 
 ```bash
-# Generate all departments (60 QA pairs total)
-python generate_faqs_standalone.py
+# Generate all departments (~60 QA pairs total)
+python datagen/generate_faqs_standalone.py
 
-# Specific provider/model
-python generate_faqs_standalone.py --provider openai --model gpt-4o
+# Data is saved to ./data/raw/ by default
+```
 
-# Specific departments only
-python generate_faqs_standalone.py --departments hr billing
+After generating data, ingest it into ChromaDB:
 
-# Custom output directory
-python generate_faqs_standalone.py --output-dir ./my_data
+```bash
+python -c "
+from src.vectorstore import ingest_faqs
+ingest_faqs(data_dir='./data/raw', chroma_dir='./data/chroma_db', reset_collection=True)
+"
 ```
 
 ### Output Format
