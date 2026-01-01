@@ -17,9 +17,17 @@ Environment Variables Required (depending on provider):
 
 import json
 import argparse
+import os
 from pathlib import Path
 from datetime import datetime
 from typing import Optional, Callable
+
+# Load environment variables from .env file
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass  # dotenv not installed, rely on environment variables
 
 # =============================================================================
 # DEPARTMENT CONTEXTS

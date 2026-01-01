@@ -1,6 +1,9 @@
 # Requirements for FAQ data generation
 # Install with: pip install -r requirements_datagen.txt
 
+# Environment
+python-dotenv>=1.0.0
+
 # LLM Providers (install the one you plan to use)
 openai>=1.12.0
 google-generativeai>=0.4.0
