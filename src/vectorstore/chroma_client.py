@@ -195,9 +195,10 @@ class ChromaDBClient:
             return retrieved_docs
 
         for i, doc_id in enumerate(results['ids'][0]):
-            # Convert distance to similarity (cosine distance)
+            # Convert distance to similarity
+            # ChromaDB uses L2 distance by default, clamp to valid range
             distance = results['distances'][0][i]
-            similarity = 1 - distance
+            similarity = max(0.0, min(1.0, 1 - distance))
 
             # Apply threshold
             if score_threshold and similarity < score_threshold:
