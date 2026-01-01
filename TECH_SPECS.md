@@ -749,6 +749,33 @@ class EmbeddingProviderFactory:
         return provider_class(**kwargs)
 ```
 
+### 2.6 Embedding Provider Comparison
+
+| Provider | Model | Dimensions | Similarity Score Range | Recommended Threshold |
+|----------|-------|------------|----------------------|----------------------|
+| **Sentence Transformers** | all-MiniLM-L6-v2 | 384 | 0.3 - 0.7 | 0.3 |
+| **Sentence Transformers** | all-mpnet-base-v2 | 768 | 0.4 - 0.8 | 0.4 |
+| **OpenAI** | text-embedding-3-small | 1536 | 0.5 - 0.9 | 0.5 |
+| **OpenAI** | text-embedding-3-large | 3072 | 0.6 - 0.95 | 0.6 |
+| **Cohere** | embed-english-v3.0 | 1024 | 0.4 - 0.85 | 0.45 |
+| **Google** | text-embedding-004 | 768 | 0.4 - 0.8 | 0.4 |
+
+**Key Observations:**
+
+1. **Dimension vs. Score Range**: Higher-dimensional embeddings (OpenAI) typically produce higher similarity scores for relevant matches and greater separation between relevant/irrelevant results.
+
+2. **MiniLM Trade-offs**:
+   - ✅ Free, local, fast, no API calls
+   - ✅ Works well for FAQ-style retrieval
+   - ⚠️ Lower similarity scores (0.3-0.5 for good matches)
+   - ⚠️ Less semantic distinction for complex queries
+
+3. **When to Switch Providers**:
+   - Use **Sentence Transformers** for: Cost-sensitive deployments, privacy requirements, offline usage
+   - Use **OpenAI embeddings** for: Higher retrieval precision, complex semantic queries, production at scale
+
+4. **Threshold Adjustment Rule**: When switching embedding providers, adjust your threshold proportionally to the score range. A query scoring 0.45 with MiniLM might score 0.75 with OpenAI embeddings.
+
 ---
 
 ## 3. Data Models (Pydantic)
