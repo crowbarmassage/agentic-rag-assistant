@@ -60,4 +60,16 @@ class Settings(BaseSettings):
 
 
 # Global settings instance
-settings = Settings()
+_settings: Settings | None = None
+
+
+def get_settings() -> Settings:
+    """Get application settings (cached singleton)."""
+    global _settings
+    if _settings is None:
+        _settings = Settings()
+    return _settings
+
+
+# Backwards compatibility
+settings = get_settings()
